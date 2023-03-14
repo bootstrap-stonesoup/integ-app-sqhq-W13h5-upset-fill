@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: integration-suite-test-component-git-source-wttk
+  namespace: integration-e2e-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/dheerajodha/test-images@sha256:0b8533cde1e3899947753d8eafe6d8de02fd7618093b6de767a37a18839c8f27
+        name: my-python
+        resources: {}
+status: {}
